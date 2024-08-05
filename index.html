@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Sagar D Londhe</title>
+    <meta name="description" content="Portfolio of Sagar Londhe, a Full Stack Developer showcasing projects, skills, and contact information.">
+    <meta name="keywords" content="Sagar Londhe, Sagar, Londhe, Full Stack Developer, Web Developer, Portfolio, Projects, Skills, HTML, CSS, JavaScript, PHP, MySQL, React, Node.js,ASP NET MVC">
+    <meta name="author" content="Sagar Londhe">
+    <meta property="og:title" content="Portfolio - Sagar Londhe">
+    <meta property="og:description" content="Explore the portfolio of Sagar Londhe, featuring web development projects, skills, and contact information.">
+
+    <!-- ======== email.js cdn link =========== -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+    <!-- ===== Iconscout CSS ====== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+    <!-- ======== jquery link ========= -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- ================ Font Awesome Icons =========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="assets/js/script.js">
+    </script>
+
+    <script src="assets/js/theme.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- ========================= Navigation Bar ======================= -->
+    <section id="top-scrollbar">
+        <i class="fa-solid fa-angle-up"></i>
+    </section>
+
+
+    <script>
+        topScrollbar = document.getElementById("top-scrollbar");
+        window.addEventListener("scroll", function () {
+            topScrollbar.style.opacity = (window.scrollY > 30) ? "1" : "0";
+        });
+
+        topScrollbar.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+
+    <nav>
+        <div class="logo">Portfolio</div>
+        <div class="nav-links">
+            <a href="#about-section">About Me</a>
+            <a href="#education-section">Education</a>
+            <a href="#skills-section">Skills</a>
+            <a href="#experience-section">Experience</a>
+            <a href="#project-section">Projects</a>
+            <a href="#contact-section">Contact</a>
+        </div>
+        <div class="switch-btn">
+            <div class="switch-toggle-btn">
+                <div class="toggle-icon">
+                    <!-- <i class="uil uil-brightness"></i> -->
+                    <i class="uil uil-moon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-btn">
+            <i class="uil uil-bars"></i>
+            <!-- <i class="uil uil-times"></i> -->
+        </div>
+    </nav>
+
+
+    <section id="sidebar-nav">
+        <div class="sidebar-nav-section">
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#about-section">About Me</a>
+                <a href="#education-section">Education</a>
+                <a href="#skills-section">Skills</a>
+                <a href="#experience-section">Experience</a>
+                <a href="#project-section">Projects</a>
+
+                <a href="#contact-section">Contact</a>
+            </div>
+            <!-- <div class="switch-btn">
+                <div class="switch-text">Appearance</div>
+                <div class="switch-toggle-btn">
+                    <div class="toggle-icon">
+                         <i class="uil uil-brightness"></i> 
+                        <i class="uil uil-moon"></i>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="social-links">
+                <div class="link-items">
+                    <a href="https://api.whatsapp.com/send?phone=7028661897&text=Hello" target="_blank">
+                        <i class="uil uil-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="link-items">
+                    <a href="https://www.linkedin.com/in/sagar-londhe-656a65225/" target="_blank">
+                        <i class="uil uil-linkedin"></i>
+                    </a>
+                </div>
+                <div class="link-items">
+                    <a href="https://github.com/sagarlondhe" target="_blank">
+                        <i class="uil uil-github"></i>
+                    </a>
+                </div>
+                <div class="link-items">
+                    <a href="https://x.com/SagarLondhe0129?t=GZCNyQOFH8uRct8MAIBFeA&s=09" target="_blank">
+                        <i class="uil uil-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $("#sidebar-nav").hide();
+
+            $(".sidebar-btn").on("click", function () {
+                $("#sidebar-nav").slideToggle(1000);
+                $(".sidebar-btn i").toggleClass("uil-bars");
+                $(".sidebar-btn i").toggleClass("uil-times");
+                $("main").fadeToggle();
+            });
+
+            $("#sidebar-nav a").on("click", function () {
+                $("#sidebar-nav").slideUp(1000);
+                $(".sidebar-btn i").toggleClass("uil-bars");
+                $(".sidebar-btn i").toggleClass("uil-times");
+                $("main").fadeToggle();
+            });
+
+            $(".toggle-icon").on("click", function () {
+                $("body").toggleClass("light");
+                $(".toggle-icon i").toggleClass("uil uil-brightness");
+                $(".switch-toggle-btn").toggleClass("move-switch");
+            });
+            
+        });
+    </script>
+    <!-- ========================= End Navigation ======================= -->
+
+
+
+    <!-- ========================= Main Section ========================= -->
+    <main>
+        <!-- 1. Fixed  Sidebar  -->
+
+        <!-- 2. About Section -->
+        <section id="about-section">
+            <div class="about-information">
+                <div class="note">Hello I'm </div>
+                <div class="name">Sagar Londhe</div>
+                <div class="role">Software Developer</div>
+                <div class="links">
+                    <a href="./assets/files/SDL-CV.pdf" download="SDLCV.pdf">Download CV <span><i
+                                class="uil uil-download-alt"></i></span></a>
+                    <a href="./assets/files/SDL-CV.pdf" download="SDLResume.pdf">Download Resume <span><i
+                                class="uil uil-download-alt"></i></span></a>
+                </div>
+
+            </div>
+            <!-- <div class="about-illustration">
+                <div class="square-rotate1"></div>
+                <div class="text">Portfolio</div>
+                <div class="square-rotate2"></div>
+            </div> -->
+        </section>
+
+        <hr>
+        <!-- 3. Education Section -->
+
+        <section id="education-section">
+            <div class="title">My Education</div>
+            <div class="education-boxes">
+                <div class="illustration">
+                    <img src="./assets/images/college.png" alt="My Education">
+                </div>
+                <div class="edu-details">
+                    <div class="box">
+                        <div>
+                            <div class="name">Masters of Computer Application</div>
+                            <div class="year">PURSUING: AUG 2023 - JUNE 2025</div>
+                            <div class="info">NCRD STRELING INSTITUTE OF MANAGEMENT STUDIES, NERUL</div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div>
+                            <div class="name">BSC in Information Technology</div>
+                            <div class="year">MAY, 2021</div>
+                            <div class="info">SONUBHAU BASWANT COLLEGE, SHAHAPUR?</div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div>
+                            <div class="name">HSC</div>
+                            <div class="year">MAY, 2018</div>
+                            <div class="info">SARASWATI JUNIOR COLLEGE, VASIND</div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div>
+                            <div class="name">SSC</div>
+                            <div class="year">MAY, 2016</div>
+                            <div class="info">SARASWATI JUNIOR COLLEGE, VASIND </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+        <!-- 3. Skills Section -->
+        <section id="skills-section">
+
+            <div class="title">My Skills</div>
+            <div class="skill-list">
+                <div><span style="--i: red"><i class="fab fa-html5"></i></span> HTML</div>
+                <div><span style="--i: blue"><i class="fab fa-css3-alt"></i></span> CSS</div>
+                <div><span style="--i: yellow"><i class="fab fa-js"></i></span> JavaScript</div>
+                <div><span style="--i: purple"><i class="fab fa-js"></i></span> JQuery</div>
+                <div><span style="--i: purple"><i class="fab fa-bootstrap"></i></span> Bootstrap</div>
+                <div><span style="--i: skyblue"><i class="fas fa-code"></i></span> C#</div>
+                <div><span style="--i: blue"><i class="fas fa-code-compare"></i></span>.NET</div>
+                <div><span style="--i: blue"><i class="fas fa-code"></i></span> ASP NET MVC</div>
+                <div><span style="--i: gray"><i class="fas fa-database"></i></span> MySQL</div>
+                <div><span style="--i: yellow"><i class="fas fa-server"></i></span> SQL Server</div>
+                <div><span style="--i: gray"><i class="fa-brands fa-git"></i></i></span> Git</div>
+                <div><span style="--i: gray"><i class="fa-brands fa-github"></i></i></span> GitHub</div>
+            </div>
+
+        </section>
+        <!-- End  -->
+
+        <!-- 4 Experience section -->
+
+        <hr>
+
+        <section id="experience-section">
+            <div class="title">My Experience</div>
+            <div class="experience-list">
+
+                <div class="box">
+                    <div class="box-item">
+                        <div class="box-info">
+                            <div class="background-img" style="--img : url(../images/todo.png)"></div>
+                            <div class="title">Software Developer</div>
+                            <div class="company-name"><b>OneRoof Technologies LLP, Mulund, Mumbai</b></div> <br>
+                            <div class="time">July 2022 - May 2023</div>
+                            <!-- <div class="description"><br>Worked on Developing various types of projects \ websites.
+                                <br> 
+                                Fixed bugs \ errors in existing projects.  <br> 
+                                Developed required APIs for the mobile development team Worked at the client site at
+                                ICICI Lombard. <br>
+                                Worked in System Design, and API integration from scratch
+                            </div> -->
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-item">
+                        <div class="box-info">
+                            <div class="background-img" style="--img : url(../images/todo.png)"></div>
+                            <div class="title">Software Developer Intern</div>
+                            <div class="company-name"><b>OneRoof Technologies LLP, Mulund, Mumbai</b></div> <br>
+                            <div class="time">Dec 2021 - Jun 2022</div>
+                            <!-- <div class="description"> <br>
+                                As an Intern, I engaged in hands-on projects, applying theoretical
+                                knowledge to real-world scenarios. <br>
+                                Through mentorship, I gained valuable insights into industry practices and career
+                                pathways. <br>
+                                Regular feedback sessions helped me refine my strengths and address areas for
+                                improvement. <br>
+                                My internship not only bolstered my resume but also clarified my career. <br>
+                                Developed frontend using HTML, CSS, JavaScript & Bootstrap, and backend Rest-APIs using
+                                Dot Net MVC Framework & SQL Server.
+                            </div> -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 6. Certificates Section -->
+
+        <section id="certificates-section">
+
+            <div class="title">My Certificates</div>
+            <div class="certificates-list">
+                <div>
+                    <h2>HTML5 Ultimate Course</h2>
+                    <h3>Udemy</h3>
+                </div>
+                <div>
+                    <h2>HTML</h2>
+                    <h3>Simplilearn</h3>
+                </div>
+                <div>
+                    <h2>CSS</h2>
+                    <h3>Simplilearn</h3>
+                </div>
+                <div>
+                    <h2>JavaScript</h2>
+                    <h3>Simplilearn</h3>
+                </div>
+                <div>
+                    <h2> Git & GitHub</h2>
+                    <h3>Udemy</h3>
+                </div>
+                <div>
+                    <h2>Data Base Management Systems</h2>
+                    <h3>SWAYAM</h3>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!-- end  -->
+
+        <!-- 7. Contact Section -->
+        <section id="contact-section">
+            <div class="title">Contact Me</div>
+            <div class="contact-details">
+                <div class="contact-info">
+                    <div class="name">
+                        Sagar Dnyaneshwar Londhe
+                    </div>
+                    <div class="contact-using">
+                        <div>
+                            Phone: +91 7028661897 <br>
+                        </div>
+
+                        <div style="word-wrap: break-word;">
+                            Email :
+                            sdl9764177106@gmail.com
+                        </div>
+                    </div>
+
+                    <div>
+                        Connect With Me
+                    </div>
+
+                    <div class="social-links">
+                        <span style="--h: green;">
+                            <a href="https://api.whatsapp.com/send?phone=7028661897&text=Hello" target="_blank">
+                                <i class="uil uil-whatsapp"></i>
+                            </a>
+                        </span>
+                        <span style="--h: blue;">
+                            <a href="https://www.linkedin.com/in/sagar-londhe-656a65225/" target="_blank">
+                                <i class="uil uil-linkedin"></i>
+                            </a>
+                        </span>
+                        <span style="--h: gray;">
+                            <a href="https://github.com/sagarlondhe" target="_blank">
+                                <i class="uil uil-github"></i>
+                            </a>
+                        </span>
+                        <span style="--h: blue;">
+                            <a href="https://x.com/SagarLondhe0129?t=GZCNyQOFH8uRct8MAIBFeA&s=09" target="_blank">
+                                <i class="uil uil-twitter"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="contact-form">
+                    <form id="form-info" action="https://api.web3forms.com/submit" method="POST" target="_blank">
+
+                        <div>
+                            <div>
+                                <input type="hidden" name="access_key" value="a75f9d9b-38cd-4f66-be96-397c7102a169">
+
+                                <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="email" placeholder="E-mail Address" required>
+                        </div>
+                        <div>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter a phone number:"
+                                pattern="[789][0-9]{9}" required>
+                        </div>
+                        <div class="feedback">
+                            <textarea name="feedback" id="feedback" cols="30" rows="5"
+                                placeholder="Give Me Some Feedback Here...." required></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Submit" id="form-info-btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ========================= End Main Section ===================== -->
+    <hr>
+    <footer>
+	Copyright © 2024 SDL. Designed By Sagar Londhe  
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+</body>
+
+</html>
